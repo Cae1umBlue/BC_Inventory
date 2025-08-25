@@ -12,4 +12,14 @@ public class UIManager : Singleton<UIManager>
     {
         base.Initialize();
     }
+
+    public void SetActiveUIStatus(bool show)
+    {
+        uiStatus.SetActive(show);
+    }
+
+    public void SetActiveUIInventory(bool show)
+    {
+        uiInventory.SetActive(show);
+    }
 }

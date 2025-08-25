@@ -19,9 +19,36 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI level;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI money;
-    [SerializeField] private GameObject statusBtn;
-    [SerializeField] private GameObject inventoryBtn;
+    [SerializeField] private Button statusBtn;
+    [SerializeField] private Button inventoryBtn;
+    [SerializeField] private Button backBtn;
 
-    [SerializeField] private GameObject uiStatus;
-    [SerializeField] private GameObject uiInventory;
+    [SerializeField] private GameObject uiStatus; // 스탯창
+    [SerializeField] private GameObject uiInventory; // 인벤토리창
+
+    private void Start()
+    {
+        uiStatus.SetActive(false);
+        uiInventory.SetActive(false);
+        backBtn.gameObject.SetActive(false);
+    }
+
+    public void SetActiveButton(bool show)
+    {
+        statusBtn.gameObject.SetActive(show);
+        inventoryBtn.gameObject.SetActive(show);
+        backBtn.gameObject.SetActive(!show);
+    }
+
+    public void OnStatus() // 스탯창 활성화
+    {
+        UIManager.Instance.SetActiveUIStatus(true);
+        SetActiveButton(false);
+    }
+
+    public void OnInventory() // 인벤토리창 활성화
+    {
+        UIManager.Instance.SetActiveUIInventory(true);
+        SetActiveButton(false);
+    }
 }
