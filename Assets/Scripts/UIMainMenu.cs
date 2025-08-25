@@ -37,18 +37,27 @@ public class UIMainMenu : MonoBehaviour
     {
         statusBtn.gameObject.SetActive(show);
         inventoryBtn.gameObject.SetActive(show);
-        backBtn.gameObject.SetActive(!show);
+        backBtn?.gameObject.SetActive(!show);
     }
 
     public void OnStatus() // 스탯창 활성화
     {
         UIManager.Instance.SetActiveUIStatus(true);
         SetActiveButton(false);
+        
     }
 
     public void OnInventory() // 인벤토리창 활성화
     {
         UIManager.Instance.SetActiveUIInventory(true);
         SetActiveButton(false);
+    }
+
+    public void OnBack()
+    {
+        UIManager.Instance.SetActiveUIStatus(false);
+        UIManager.Instance.SetActiveUIInventory(false);
+        SetActiveButton(true);
+
     }
 }
