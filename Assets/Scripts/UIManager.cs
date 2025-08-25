@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-    [SerializeField] GameObject uiMainMenu;
-    [SerializeField] GameObject uiStatus;
-    [SerializeField] GameObject uiInventory;
+    [SerializeField] UIMainMenu uiMainMenu;
+    [SerializeField] UIStatus uiStatus;
+    [SerializeField] UIInventory uiInventory;
+
+    public UIMainMenu MainMenu {  get { return uiMainMenu; } }
+    public UIInventory Inventory {  get { return uiInventory; } }
+    public UIStatus Status {  get { return uiStatus; } }
 
     protected override void Initialize()
     {
         base.Initialize();
-    }
-
-    public void SetActiveUIStatus(bool show)
-    {
-        uiStatus.SetActive(show);
-    }
-
-    public void SetActiveUIInventory(bool show)
-    {
-        uiInventory.SetActive(show);
     }
 }
