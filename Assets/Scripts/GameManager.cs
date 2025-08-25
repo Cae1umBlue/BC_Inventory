@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject uiManagerObject;
+    [SerializeField] GameObject characterObject;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public UIManager uiManager;
+    public Character character;
+
+    protected override void Initialize() 
+    { 
+        uiManager = uiManagerObject.AddComponent<UIManager>();
+        character = characterObject.AddComponent<Character>();
     }
 }
