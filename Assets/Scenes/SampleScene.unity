@@ -527,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224655786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -629,6 +629,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c783b3bf48a77429dbe299f0fe9f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backBtn: {fileID: 731966200}
+  attackValue: {fileID: 1256474362}
+  defenceValue: {fileID: 694897676}
+  healthValue: {fileID: 414896512}
+  criticalValue: {fileID: 423084377}
 --- !u!1 &331851032
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +834,7 @@ GameObject:
   - component: {fileID: 414896513}
   - component: {fileID: 414896512}
   m_Layer: 5
-  m_Name: Status_Health
+  m_Name: Status_HealthValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,7 +968,7 @@ GameObject:
   - component: {fileID: 423084378}
   - component: {fileID: 423084377}
   m_Layer: 5
-  m_Name: Status_Attack
+  m_Name: Status_CriticalValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,7 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d476c15fa9c65c54a8e11d3ddf1ee537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backBtn: {fileID: 0}
+  backBtn: {fileID: 1446061535}
 --- !u!1 &694897674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,7 +1581,7 @@ GameObject:
   - component: {fileID: 694897677}
   - component: {fileID: 694897676}
   m_Layer: 5
-  m_Name: Status_Defence
+  m_Name: Status_DefenceValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3563,7 +3568,7 @@ GameObject:
   - component: {fileID: 1256474363}
   - component: {fileID: 1256474362}
   m_Layer: 5
-  m_Name: Status_Attack
+  m_Name: Status_AttackValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

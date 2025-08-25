@@ -15,5 +15,8 @@ public class UIManager : Singleton<UIManager>
     protected override void Initialize()
     {
         base.Initialize();
+        MainMenu.gameObject.SetActive(true);
+        Inventory.gameObject.SetActive(false);
+        Status.gameObject.SetActive(false);
     }
 }
