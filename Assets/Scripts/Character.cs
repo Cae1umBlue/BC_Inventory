@@ -17,4 +17,21 @@ public class Character : MonoBehaviour
     [SerializeField] int defence;
     [SerializeField] int health;
     [SerializeField] int critical;
+
+    //프로퍼티
+        // Info
+    public string ID => id;
+    public int Level => level;
+    public int CurrentExp => currentExp;
+    public int MaxExp => maxExp;
+    public string Description => description;
+    public int Money => money;
+
+        // Status
+    public int Attack => attack;
+    public int Defence => defence;
+    public int Health => health;
+    public int Critical => critical;
+
+    
 }
