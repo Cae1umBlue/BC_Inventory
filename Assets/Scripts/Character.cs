@@ -33,8 +33,17 @@ public class Character : MonoBehaviour
     public int Health => health;
     public int Critical => critical;
 
-    public void SetStatus()
+    // 레벨업
+    public void LevelUp()
     {
+        level++;
+        currentExp = 0;
+        maxExp += 10;
+        attack += 5;
+        defence += 5;
+        health += 50;
+        critical += 1;
+    }
 
     }
 }
