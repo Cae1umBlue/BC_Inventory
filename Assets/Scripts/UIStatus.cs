@@ -12,6 +12,8 @@ public class UIStatus : MonoBehaviour
     [SerializeField] private TextMeshProUGUI defenceValue;
     [SerializeField] private TextMeshProUGUI healthValue;
     [SerializeField] private TextMeshProUGUI criticalValue;
+
+    private Character character;
     private void Start()
     {
         backBtn.onClick.AddListener(() => UIManager.Instance.MainMenu.OpenMainMenu());
@@ -21,9 +23,9 @@ public class UIStatus : MonoBehaviour
     // 플레이어 스탯데이터 연동 예정
     public void UpdateStatus()
     {
-        attackValue.text = "10";
-        defenceValue.text = "5";
-        healthValue.text = "100";
-        criticalValue.text = "10";
+        attackValue.text = $"{character.Attack}";
+        defenceValue.text = $"{character.Defence}";
+        healthValue.text = $"{character.Health}";
+        criticalValue.text = $"{character.Critical}";
     }
 }
