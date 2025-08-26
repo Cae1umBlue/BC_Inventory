@@ -18,7 +18,7 @@ public class UIStatus : MonoBehaviour
         UpdateStatus();
     }
 
-    // ÇÃ·¹ÀÌ¾î ½ºÅÈµ¥ÀÌÅÍ ¿¬µ¿ ¿¹Á¤
+    // í”Œë ˆì´ì–´ ìŠ¤íƒ¯ë°ì´í„° ì—°ë™ ì˜ˆì •
     public void UpdateStatus()
     {
         attackValue.text = "10";
