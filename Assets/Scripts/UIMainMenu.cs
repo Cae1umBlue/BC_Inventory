@@ -63,6 +63,6 @@ public class UIMainMenu : MonoBehaviour
         id.text = character.ID;
         level.text = $"LV {character.Level}";
         description.text = character.Description;
-        money.text = $"{character.Money}";
+        money.text = character.Money.ToString("#,##0");
     }
 }
