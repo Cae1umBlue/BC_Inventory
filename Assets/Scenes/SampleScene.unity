@@ -527,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224655786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5025,6 +5025,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc514ce11580f1646b78e24c69f2de76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: Mina
+  level: 1
+  currentExp: 9
+  maxExp: 12
+  description: "\uD604\uC5ED \uC5EC\uB300\uC0DD, \uC720\uB2E8\uC790"
+  money: 1000
+  attack: 10
+  defence: 5
+  health: 100
+  critical: 3
 --- !u!1 &1857304734
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,5 +10,7 @@ public class GameManager : Singleton<GameManager>
     protected override void Initialize() 
     { 
         base.Initialize();
+        uiManager.Status.Initialize(character);
+        uiManager.MainMenu.Initialize(character);
     }
 }

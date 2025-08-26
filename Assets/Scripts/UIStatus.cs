@@ -17,10 +17,17 @@ public class UIStatus : MonoBehaviour
     private void Start()
     {
         backBtn.onClick.AddListener(() => UIManager.Instance.MainMenu.OpenMainMenu());
+        
+        if(character != null)
+            UpdateStatus();
+    }
+
+    public void Initialize(Character target)
+    {
+        character = target;
         UpdateStatus();
     }
 
-    // 플레이어 스탯데이터 연동 예정
     public void UpdateStatus()
     {
         attackValue.text = $"{character.Attack}";

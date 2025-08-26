@@ -33,5 +33,8 @@ public class Character : MonoBehaviour
     public int Health => health;
     public int Critical => critical;
 
-    
+    public void SetStatus()
+    {
+
+    }
 }

@@ -13,10 +13,13 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private Button statusBtn;
     [SerializeField] private Button inventoryBtn;
 
+    private Character character;
+
     private void Start()
-    {       
+    {
         statusBtn.onClick.AddListener(OpenStatus);
         inventoryBtn.onClick.AddListener(OpenInventory);
+        UpdateCharacterInfo();
     }
 
     public void OpenMainMenu()
@@ -47,5 +50,19 @@ public class UIMainMenu : MonoBehaviour
     {
         statusBtn.gameObject.SetActive(active);
         inventoryBtn.gameObject.SetActive(active);
+    }
+
+    public void Initialize(Character target)
+    {
+        character = target;
+        UpdateCharacterInfo();
+    }
+
+    public void UpdateCharacterInfo()
+    {
+        id.text = character.ID;
+        level.text = $"LV {character.Level}";
+        description.text = character.Description;
+        money.text = $"{character.Money}";
     }
 }
