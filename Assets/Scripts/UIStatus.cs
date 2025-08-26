@@ -15,5 +15,15 @@ public class UIStatus : MonoBehaviour
     private void Start()
     {
         backBtn.onClick.AddListener(() => UIManager.Instance.MainMenu.OpenMainMenu());
+        UpdateStatus();
+    }
+
+    // 플레이어 스탯데이터 연동 예정
+    public void UpdateStatus()
+    {
+        attackValue.text = "10";
+        defenceValue.text = "5";
+        healthValue.text = "100";
+        criticalValue.text = "10";
     }
 }
