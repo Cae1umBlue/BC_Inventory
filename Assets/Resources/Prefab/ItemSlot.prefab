@@ -239,8 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac041e0872e7ea242b96ea219a9d0b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  inventory: {fileID: 0}
-  icon: {fileID: 0}
-  index: 0
+  equip: {fileID: 3629818324736169803}
+  icon: {fileID: 1707260669033480485}
   isEquipped: 0
