@@ -6,39 +6,37 @@ using UnityEngine.UI;
 
 public class UISlot : MonoBehaviour
 {
-    [SerializeField] ItemData item;
-
-    [SerializeField] UIInventory inventory;
-    [SerializeField] private Image icon;
+    [SerializeField] private GameObject equip; // 장착 표시
+    [SerializeField] private Image icon; // 아이템 아이콘
     private Outline outline;
 
-    public int index;
-    public bool equipped;
+    private ItemData item;
+    public bool isEquipped;
 
     private void Awake()
     {
         outline = GetComponent<Outline>();
     }
 
-    private void OnEnable()
+    public void SetItem(ItemData newItem, bool equipped = false)
     {
-        outline.enabled = equipped;
-    }
-
-    public void SetItem()
-    {
-        icon.gameObject.SetActive(true);
+        item = newItem;
+        isEquipped = equipped;
         icon.sprite = item.icon;
-
-        if(outline != null )
-        {
-            outline.enabled = equipped;
-        }
     }
 
-    public void RefreshItem()
+    public void RefreshUI()
     {
-        item = null;
-        icon.gameObject.SetActive(false);
+        if(item == null)
+        {
+            icon.sprite = null;
+            if(outline != null) outline.enabled = false;
+            equip.SetActive(false);
+            return;
+        }
+
+        icon.sprite = item.icon;
+        if (outline != null) outline.enabled = isEquipped;
+        equip.SetActive(true);
     }
 }
