@@ -45,5 +45,9 @@ public class Character : MonoBehaviour
         critical += 1;
     }
 
+    // 돈 획득/소비
+    public void ChangeMoney(int amount)
+    {
+        money += amount;
     }
 }
