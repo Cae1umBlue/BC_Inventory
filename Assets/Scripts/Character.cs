@@ -45,11 +45,21 @@ public class Character
     {
         if (!Inventory.Contains(itemData)) return;
         itemData.isEquipped = true;
+
+        Attack += itemData.extraAttack;
+        Defence += itemData.extraDefence;
+        Health += itemData.extraHealth; 
+        Critical += itemData.extraCritical;
     }
 
     public void UnEquip(ItemData itemData)
     {
         if (!Inventory.Contains(itemData)) return;
         itemData.isEquipped = false;
+
+        Attack -= itemData.extraAttack;
+        Defence -= itemData.extraDefence;
+        Health -= itemData.extraHealth;
+        Critical -= itemData.extraCritical;
     }
 }
