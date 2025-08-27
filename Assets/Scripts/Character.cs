@@ -34,4 +34,22 @@ public class Character
         Money = money;
         Inventory = new List<ItemData>();
     }
+
+    public void Additem(ItemData itemData)
+    {
+        if (itemData == null) return;
+        Inventory.Add(itemData);
+    }
+
+    public void Equip(ItemData itemData)
+    {
+        if (!Inventory.Contains(itemData)) return;
+        itemData.isEquipped = true;
+    }
+
+    public void UnEquip(ItemData itemData)
+    {
+        if (!Inventory.Contains(itemData)) return;
+        itemData.isEquipped = false;
+    }
 }

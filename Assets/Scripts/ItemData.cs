@@ -15,4 +15,6 @@ public class ItemData : ScriptableObject
     public int extraDefence;
     public int extraHealth;
     public int extraCritical;
+
+    public bool isEquipped;
 }
