@@ -11,11 +11,16 @@ public class UIInventory : MonoBehaviour
     [SerializeField] Transform slotParent;
 
     private List<UISlot> slotList = new List<UISlot>();
-    [SerializeField] private List<ItemData> itemDatas;
+    private Character player;
 
     private void Start()
     {
         backBtn.onClick.AddListener(() => UIManager.Instance.MainMenu.OpenMainMenu());
+    }
+
+    public void Initialize(Character targetPlayer)
+    {
+        player = targetPlayer;
         InitInventoryUI();
     }
 
@@ -27,10 +32,10 @@ public class UIInventory : MonoBehaviour
         }
         slotList.Clear();
 
-        foreach (var item in itemDatas)
+        foreach (var itemData in player.Inventory)
         {
             var slot = Instantiate(itemSlotPrefab, slotParent);
-            slot.SetItem(item);
+            slot.SetItem(itemData);
             slotList.Add(slot);
         }
     }
