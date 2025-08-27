@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27549a925f63bbe42ba0a424e9e498ab, type: 3}
   m_Name: rings
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: "\uC6B4\uB3D9\uD654"
-  description: "\uBE60\uB974\uAC8C \uB2EC\uB9B4 \uC218 \uC788\uB2E4."
-  icon: {fileID: 21300000, guid: 514435b61a8c08d4bb4ecb213d82d664, type: 3}
-  price: 1000
-  extraAttack: 5
-  extraDefence: 10
-  extraHealth: 20
-  extraCritical: 1
+  itemName: "\uBC18\uC9C0"
+  description: "\uBE44\uC2F8\uBCF4\uC774\uB294 \uBC18\uC9C0\uC774\uB2E4."
+  icon: {fileID: 21300000, guid: 970324311431c794ca338446ea889948, type: 3}
+  price: 3000
+  extraAttack: 1
+  extraDefence: 0
+  extraHealth: 5
+  extraCritical: 5
+  isEquipped: 0

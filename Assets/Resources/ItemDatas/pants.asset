@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27549a925f63bbe42ba0a424e9e498ab, type: 3}
   m_Name: pants
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: "\uC6B4\uB3D9\uD654"
-  description: "\uBE60\uB974\uAC8C \uB2EC\uB9B4 \uC218 \uC788\uB2E4."
-  icon: {fileID: 21300000, guid: 514435b61a8c08d4bb4ecb213d82d664, type: 3}
-  price: 1000
-  extraAttack: 5
-  extraDefence: 10
-  extraHealth: 20
-  extraCritical: 1
+  itemName: "\uBC14\uC9C0"
+  description: "\uAC00\uBCBC\uC6B4 \uCC9C\uC73C\uB85C \uB9CC\uB4E0 \uBC14\uC9C0\uC774\uB2E4."
+  icon: {fileID: 21300000, guid: b8fb302c5768e334ca82005f50e58121, type: 3}
+  price: 500
+  extraAttack: 0
+  extraDefence: 5
+  extraHealth: 10
+  extraCritical: 0
+  isEquipped: 0

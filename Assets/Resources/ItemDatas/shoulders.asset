@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27549a925f63bbe42ba0a424e9e498ab, type: 3}
   m_Name: shoulders
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: "\uD558\uC774\uD790"
-  description: "\uB0A0\uB835\uD55C \uAD7D\uC774 \uB9E4\uB825\uC778 \uD558\uC774\uD790.
-    \uD558\uC9C0\uB9CC \uC870\uC2EC\uD574-\uC774\uAC74 \uD328\uC158\uC774\uC790 \uBB34\uAE30\uB2E4."
-  icon: {fileID: 21300000, guid: 514435b61a8c08d4bb4ecb213d82d664, type: 3}
+  itemName: "\uC5B4\uAE68\uBCF4\uD638\uB300"
+  description: "\uC5B4\uAE68\uB97C \uBCF4\uD638\uD558\uB294 \uBC29\uC5B4\uAD6C\uC774\uB2E4."
+  icon: {fileID: 21300000, guid: f126324fd2486a641842ea5a8244c2d1, type: 3}
   price: 1000
-  extraAttack: 7
-  extraDefence: 3
-  extraHealth: 0
-  extraCritical: 3
+  extraAttack: 0
+  extraDefence: 8
+  extraHealth: 50
+  extraCritical: 0
   isEquipped: 0

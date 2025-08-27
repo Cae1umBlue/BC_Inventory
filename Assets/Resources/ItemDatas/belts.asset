@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27549a925f63bbe42ba0a424e9e498ab, type: 3}
   m_Name: belts
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  description: 
-  icon: {fileID: 0}
-  price: 0
+  itemName: "\uBCA8\uD2B8"
+  description: "\uC9C8\uAE34 \uAC00\uC8FD\uC73C\uB85C \uB9CC\uB4E4 \uBCA8\uD2B8\uC774\uB2E4."
+  icon: {fileID: 21300000, guid: da09804303305f542a686824630e7269, type: 3}
+  price: 500
   extraAttack: 0
-  extraDefence: 0
-  extraHealth: 0
+  extraDefence: 12
+  extraHealth: 25
   extraCritical: 0
   isEquipped: 0

@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
 
     public void SetData()
     {
-        Player = new Character("Mina", 01, "각종 무술 유단자", 10, 5, 100, 3, 1000);
+        Player = new Character("Mina", 01, "대학생, 각종 무술 유단자, 집으로 귀가중 갑자기 이상한 곳으로 와버렸다.", 10, 5, 100, 3, 1000);
         SetInventoryItem();    
         uiManager.Status.Initialize(Player);
         uiManager.MainMenu.Initialize(Player);
