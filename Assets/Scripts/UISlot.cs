@@ -24,7 +24,7 @@ public class UISlot : MonoBehaviour
 
         if (item != null && icon != null)
             icon.sprite = item.icon;
-
+        button.onClick.RemoveAllListeners();
         button.onClick.AddListener(ToogleEquip);
     }
 
