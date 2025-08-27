@@ -26,17 +26,19 @@ public class UIInventory : MonoBehaviour
 
     public void InitInventoryUI()
     {
-        foreach(Transform child in slotParent)
-        {
-            Destroy(child.gameObject);
-        }
-        slotList.Clear();
-
-        foreach (var itemData in player.Inventory)
+        while (slotList.Count < player.Inventory.Count)
         {
             var slot = Instantiate(itemSlotPrefab, slotParent);
-            slot.SetItem(itemData);
             slotList.Add(slot);
+        }
+
+        for (int i = 0; i < slotList.Count; i++)
+        {
+            if(i <  player.Inventory.Count)
+            {
+                slotList[i].gameObject.SetActive(true);
+                slotList[i].SetItem(player.Inventory[i]);
+            }
         }
     }
 }

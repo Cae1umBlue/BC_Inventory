@@ -21,7 +21,10 @@ public class UISlot : MonoBehaviour
     public void SetItem(ItemData newItem)
     {
         item = newItem;
-        icon.sprite = item.icon;
+
+        if (item != null && icon != null)
+            icon.sprite = item.icon;
+
         button.onClick.AddListener(ToogleEquip);
     }
 

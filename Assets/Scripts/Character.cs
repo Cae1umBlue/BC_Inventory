@@ -20,6 +20,7 @@ public class Character
 
 
     public List<ItemData> Inventory { get; private set; }
+    private int inventoryCount = 12;
 
     public Character(string characterName, int level, string description,
                      int attack, int defence, int health, int critical, int money = 0, int currentExp = 7, int maxExp = 10)
@@ -32,13 +33,29 @@ public class Character
         Health = health;
         Critical = critical;
         Money = money;
-        Inventory = new List<ItemData>();
+
+        Inventory = new List<ItemData>(inventoryCount);
+        for(int i = 0; i < inventoryCount; i++)
+        {
+            Inventory.Add(null);
+        }
+
+        CurrentExp = currentExp;
+        MaxExp = maxExp;
     }
 
-    public void Additem(ItemData itemData)
+    public void Additem(ItemData newItem)
     {
-        if (itemData == null) return;
-        Inventory.Add(itemData);
+        for(int i = 0; i< Inventory.Count; i++)
+        { 
+            if (Inventory[i] == null)
+            {
+                Inventory[i] = newItem;
+                return;
+            }
+        }
+
+        Inventory.Add(newItem);
     }
 
     public void Equip(ItemData itemData)
