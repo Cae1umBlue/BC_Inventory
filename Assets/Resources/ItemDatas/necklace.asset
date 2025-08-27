@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27549a925f63bbe42ba0a424e9e498ab, type: 3}
-  m_Name: Cloth 4
+  m_Name: necklace
   m_EditorClassIdentifier: 
   id: 1
   itemName: "\uC6B4\uB3D9\uD654"
