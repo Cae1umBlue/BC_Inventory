@@ -6,10 +6,6 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] UIManager uiManager;
-    [SerializeField] Character character;
-
-    [SerializeField] Character characterPrefab;
-
     public Character Player {  get; private set; }
 
     protected override void Initialize() 
@@ -20,8 +16,8 @@ public class GameManager : Singleton<GameManager>
 
     public void SetData()
     {
-        Player = Instantiate(characterPrefab);
-        uiManager.Status.Initialize(character);
-        uiManager.MainMenu.Initialize(character);
+        Player = new Character("Mina", 01, "각종 무술 유단자", 10, 5, 100, 3, 1000);
+        uiManager.Status.Initialize(Player);
+        uiManager.MainMenu.Initialize(Player);
     }
 }

@@ -2,52 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character
 {
-    [Header("Info")]
-    [SerializeField] string id;
-    [SerializeField] int level;
-    [SerializeField] int currentExp;
-    [SerializeField] int maxExp;
-    [SerializeField] string description;
-    [SerializeField] int money;
+    // Info
+    public string CharacterName { get; private set; }
+    public int Level { get; private set; }
+    public int CurrentExp { get; private set; }
+    public int MaxExp { get; private set; }
+    public string Description { get; private set; }
+    public int Money { get; private set; }
 
-    [Header("Status")]
-    [SerializeField] int attack;
-    [SerializeField] int defence;
-    [SerializeField] int health;
-    [SerializeField] int critical;
+    // Status
+    public int Attack { get; private set; }
+    public int Defence { get; private set; }
+    public int Health { get; private set; }
+    public int Critical { get; private set; }
 
-    //프로퍼티
-        // Info
-    public string ID => id;
-    public int Level => level;
-    public int CurrentExp => currentExp;
-    public int MaxExp => maxExp;
-    public string Description => description;
-    public int Money => money;
 
-        // Status
-    public int Attack => attack;
-    public int Defence => defence;
-    public int Health => health;
-    public int Critical => critical;
+    public List<ItemData> Inventory { get; private set; }
 
-    // 레벨업
-    public void LevelUp()
+    public Character(string characterName, int level, string description,
+                     int attack, int defence, int health, int critical, int money = 0)
     {
-        level++;
-        currentExp = 0;
-        maxExp += 10;
-        attack += 5;
-        defence += 5;
-        health += 50;
-        critical += 1;
-    }
-
-    // 돈 획득/소비
-    public void ChangeMoney(int amount)
-    {
-        money += amount;
+        CharacterName = characterName;
+        Level = level;
+        Description = description;
+        Attack = attack;
+        Defence = defence;
+        Health = health;
+        Critical = critical;
+        Money = money;
+        Inventory = new List<ItemData>();
     }
 }

@@ -60,7 +60,7 @@ public class UIMainMenu : MonoBehaviour
 
     public void UpdateCharacterInfo()
     {
-        id.text = character.ID;
+        id.text = character.CharacterName;
         level.text = $"LV {character.Level}";
         description.text = character.Description;
         money.text = character.Money.ToString("#,##0");
