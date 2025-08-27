@@ -10,6 +10,8 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI level;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI money;
+    [SerializeField] private TextMeshProUGUI expValue;
+    [SerializeField] private Image expImage;
     [SerializeField] private Button statusBtn;
     [SerializeField] private Button inventoryBtn;
 
@@ -64,5 +66,11 @@ public class UIMainMenu : MonoBehaviour
         level.text = $"LV {character.Level}";
         description.text = character.Description;
         money.text = character.Money.ToString("#,##0");
+
+        expValue.text = $"{character.CurrentExp} / {character.MaxExp}";
+        if (character.MaxExp > 0)
+            expImage.fillAmount = (float)character.CurrentExp / character.MaxExp;
+        else
+            expImage.fillAmount = 0f;
     }
 }

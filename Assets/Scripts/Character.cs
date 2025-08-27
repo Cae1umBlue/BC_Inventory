@@ -22,7 +22,7 @@ public class Character
     public List<ItemData> Inventory { get; private set; }
 
     public Character(string characterName, int level, string description,
-                     int attack, int defence, int health, int critical, int money = 0)
+                     int attack, int defence, int health, int critical, int money = 0, int currentExp = 7, int maxExp = 10)
     {
         CharacterName = characterName;
         Level = level;
