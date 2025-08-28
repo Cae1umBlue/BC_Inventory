@@ -27,7 +27,7 @@ public class GameManager : Singleton<GameManager>
     {
         string[] itemNames = {
         "axe", "belts", "boots", "gloves", "helmets",
-        "necklace", "pants", "rings", "shield", "shoulders", "sword"
+        "necklace", "pants", "rings", "shield", "shoulders", "sword","EX 1","EX 2","EX 3", "EX",
         };
 
         foreach (var itemName in itemNames)
